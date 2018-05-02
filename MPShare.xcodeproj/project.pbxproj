@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		500D70CB209A168200CC3470 /* peertalk in Resources */ = {isa = PBXBuildFile; fileRef = 500D70CA209A168200CC3470 /* peertalk */; };
+		500D70CE209A173D00CC3470 /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70CD209A173D00CC3470 /* PTChannel.m */; };
+		500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70D2209A17B900CC3470 /* PTProtocol.m */; };
+		500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70D4209A17FD00CC3470 /* PTUSBHub.m */; };
 		50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20A8209A0942008586C1 /* AppDelegate.swift */; };
 		50AC20AB209A0942008586C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* ViewController.swift */; };
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
@@ -17,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		500D70CA209A168200CC3470 /* peertalk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = peertalk; sourceTree = "<group>"; };
+		500D70CC209A170700CC3470 /* MPShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPShare-Bridging-Header.h"; sourceTree = "<group>"; };
+		500D70CD209A173D00CC3470 /* PTChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTChannel.m; path = MPShare/peertalk/PTChannel.m; sourceTree = "<group>"; };
+		500D70D2209A17B900CC3470 /* PTProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTProtocol.m; path = MPShare/peertalk/PTProtocol.m; sourceTree = "<group>"; };
+		500D70D4209A17FD00CC3470 /* PTUSBHub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTUSBHub.m; path = MPShare/peertalk/PTUSBHub.m; sourceTree = "<group>"; };
 		50AC20A5209A0942008586C1 /* MPShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC20A8209A0942008586C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AC20AA209A0942008586C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +48,10 @@
 		50AC209C209A0942008586C1 = {
 			isa = PBXGroup;
 			children = (
+				500D70D4209A17FD00CC3470 /* PTUSBHub.m */,
+				500D70D2209A17B900CC3470 /* PTProtocol.m */,
+				500D70CD209A173D00CC3470 /* PTChannel.m */,
+				500D70CC209A170700CC3470 /* MPShare-Bridging-Header.h */,
 				50AC20C0209A099B008586C1 /* README.md */,
 				50AC20A7209A0942008586C1 /* MPShare */,
 				50AC20A6209A0942008586C1 /* Products */,
@@ -190,6 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
+				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
+				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
 				50AC20AB209A0942008586C1 /* ViewController.swift in Sources */,
 				50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */,
 			);
@@ -335,6 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.MPShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MPShare-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -351,6 +366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.MPShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MPShare-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
