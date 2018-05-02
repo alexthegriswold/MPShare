@@ -16,6 +16,14 @@
 		506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915B209A1D48005F47D7 /* PhotoSet.swift */; };
 		506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915D209A1D75005F47D7 /* MainHeaderModel.swift */; };
 		506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915F209A1D8A005F47D7 /* PeertalkPhotoSet.swift */; };
+		506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9162209A21BA005F47D7 /* PhotoSetSectionController.swift */; };
+		506F9166209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9165209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift */; };
+		506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9167209A22D5005F47D7 /* PhotoSetViewModel.swift */; };
+		506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F916C209A23D5005F47D7 /* PhotoSetCell.swift */; };
+		506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F916E209A2431005F47D7 /* PhotoSetHeaderCell.swift */; };
+		506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9170209A24CB005F47D7 /* MainHeaderCell.swift */; };
+		506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */; };
+		506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */; };
 		50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20A8209A0942008586C1 /* AppDelegate.swift */; };
 		50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */; };
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
@@ -37,6 +45,14 @@
 		506F915B209A1D48005F47D7 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
 		506F915D209A1D75005F47D7 /* MainHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderModel.swift; sourceTree = "<group>"; };
 		506F915F209A1D8A005F47D7 /* PeertalkPhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeertalkPhotoSet.swift; sourceTree = "<group>"; };
+		506F9162209A21BA005F47D7 /* PhotoSetSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetSectionController.swift; sourceTree = "<group>"; };
+		506F9165209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetHeaderViewModel.swift; sourceTree = "<group>"; };
+		506F9167209A22D5005F47D7 /* PhotoSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetViewModel.swift; sourceTree = "<group>"; };
+		506F916C209A23D5005F47D7 /* PhotoSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetCell.swift; sourceTree = "<group>"; };
+		506F916E209A2431005F47D7 /* PhotoSetHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetHeaderCell.swift; sourceTree = "<group>"; };
+		506F9170209A24CB005F47D7 /* MainHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderCell.swift; sourceTree = "<group>"; };
+		506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderViewModel.swift; sourceTree = "<group>"; };
+		506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderSectionController.swift; sourceTree = "<group>"; };
 		50AC20A5209A0942008586C1 /* MPShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC20A8209A0942008586C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +96,35 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		506F9161209A2198005F47D7 /* Section Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				506F9162209A21BA005F47D7 /* PhotoSetSectionController.swift */,
+				506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */,
+			);
+			path = "Section Controllers";
+			sourceTree = "<group>";
+		};
+		506F9164209A2261005F47D7 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				506F9165209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift */,
+				506F9167209A22D5005F47D7 /* PhotoSetViewModel.swift */,
+				506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		506F916B209A23BB005F47D7 /* View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				506F916C209A23D5005F47D7 /* PhotoSetCell.swift */,
+				506F9170209A24CB005F47D7 /* MainHeaderCell.swift */,
+				506F916E209A2431005F47D7 /* PhotoSetHeaderCell.swift */,
+			);
+			path = "View Cells";
+			sourceTree = "<group>";
+		};
 		50AC209C209A0942008586C1 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +151,9 @@
 		50AC20A7209A0942008586C1 /* MPShare */ = {
 			isa = PBXGroup;
 			children = (
+				506F916B209A23BB005F47D7 /* View Cells */,
+				506F9164209A2261005F47D7 /* View Models */,
+				506F9161209A2198005F47D7 /* Section Controllers */,
 				500D70CA209A168200CC3470 /* peertalk */,
 				50AC20BE209A0978008586C1 /* Storyboards */,
 				50AC20BC209A0963008586C1 /* Resources */,
@@ -310,12 +358,20 @@
 				506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
+				506F9166209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift in Sources */,
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
 				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
+				506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */,
 				506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */,
 				50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */,
 				50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */,
+				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
+				506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */,
+				506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */,
 				506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */,
+				506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */,
+				506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */,
+				506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */,
 				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

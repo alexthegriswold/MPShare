@@ -8,7 +8,7 @@
 
 import IGListKit
 
-final class PhotoSetModel: ListDiffable {
+final class PhotoSet: ListDiffable {
     
     let photoSetID: String
     var imagesNames = [String]()
@@ -26,7 +26,7 @@ final class PhotoSetModel: ListDiffable {
     
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         guard self !== object else { return true }
-        guard let object = object as? PhotoSetModel else { return false }
+        guard let object = object as? PhotoSet else { return false }
         return photoSetID == object.photoSetID
     }
 }
