@@ -11,8 +11,13 @@
 		500D70CE209A173D00CC3470 /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70CD209A173D00CC3470 /* PTChannel.m */; };
 		500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70D2209A17B900CC3470 /* PTProtocol.m */; };
 		500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D70D4209A17FD00CC3470 /* PTUSBHub.m */; };
+		506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9157209A1CCB005F47D7 /* RealmPhotoSet.swift */; };
+		506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9159209A1CFC005F47D7 /* ImageURL.swift */; };
+		506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915B209A1D48005F47D7 /* PhotoSet.swift */; };
+		506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915D209A1D75005F47D7 /* MainHeaderModel.swift */; };
+		506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F915F209A1D8A005F47D7 /* PeertalkPhotoSet.swift */; };
 		50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20A8209A0942008586C1 /* AppDelegate.swift */; };
-		50AC20AB209A0942008586C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* ViewController.swift */; };
+		50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */; };
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
 		50AC20B0209A0942008586C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AF209A0942008586C1 /* Assets.xcassets */; };
 		50AC20B3209A0942008586C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */; };
@@ -27,9 +32,14 @@
 		500D70CD209A173D00CC3470 /* PTChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTChannel.m; path = MPShare/peertalk/PTChannel.m; sourceTree = "<group>"; };
 		500D70D2209A17B900CC3470 /* PTProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTProtocol.m; path = MPShare/peertalk/PTProtocol.m; sourceTree = "<group>"; };
 		500D70D4209A17FD00CC3470 /* PTUSBHub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTUSBHub.m; path = MPShare/peertalk/PTUSBHub.m; sourceTree = "<group>"; };
+		506F9157209A1CCB005F47D7 /* RealmPhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPhotoSet.swift; sourceTree = "<group>"; };
+		506F9159209A1CFC005F47D7 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		506F915B209A1D48005F47D7 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
+		506F915D209A1D75005F47D7 /* MainHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderModel.swift; sourceTree = "<group>"; };
+		506F915F209A1D8A005F47D7 /* PeertalkPhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeertalkPhotoSet.swift; sourceTree = "<group>"; };
 		50AC20A5209A0942008586C1 /* MPShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC20A8209A0942008586C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50AC20AA209A0942008586C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetViewController.swift; sourceTree = "<group>"; };
 		50AC20AD209A0942008586C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50AC20AF209A0942008586C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50AC20B2209A0942008586C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +60,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		506F9154209A1C88005F47D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				506F9155209A1CA1005F47D7 /* Realm */,
+				506F915B209A1D48005F47D7 /* PhotoSet.swift */,
+				506F915D209A1D75005F47D7 /* MainHeaderModel.swift */,
+				506F915F209A1D8A005F47D7 /* PeertalkPhotoSet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		506F9155209A1CA1005F47D7 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				506F9157209A1CCB005F47D7 /* RealmPhotoSet.swift */,
+				506F9159209A1CFC005F47D7 /* ImageURL.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		50AC209C209A0942008586C1 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +110,7 @@
 				50AC20BE209A0978008586C1 /* Storyboards */,
 				50AC20BC209A0963008586C1 /* Resources */,
 				50AC20BB209A095A008586C1 /* View Controllers */,
+				506F9154209A1C88005F47D7 /* Models */,
 				50AC20BA209A094B008586C1 /* Application Delegate */,
 				50AC20B4209A0942008586C1 /* Info.plist */,
 			);
@@ -97,7 +128,7 @@
 		50AC20BB209A095A008586C1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				50AC20AA209A0942008586C1 /* ViewController.swift */,
+				50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -276,11 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
-				50AC20AB209A0942008586C1 /* ViewController.swift in Sources */,
+				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
+				506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */,
+				50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */,
 				50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */,
+				506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */,
+				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
