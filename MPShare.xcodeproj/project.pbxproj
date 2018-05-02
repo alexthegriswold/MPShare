@@ -16,9 +16,12 @@
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
 		50AC20B0209A0942008586C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AF209A0942008586C1 /* Assets.xcassets */; };
 		50AC20B3209A0942008586C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */; };
+		E51A4CCBE32C9BD90E9ECF6B /* Pods_MPShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E80B14E35053D8BE1F9B541 /* Pods_MPShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E80B14E35053D8BE1F9B541 /* Pods_MPShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ECC85892409A0FFF77D155B /* Pods-MPShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPShare/Pods-MPShare.debug.xcconfig"; sourceTree = "<group>"; };
 		500D70CA209A168200CC3470 /* peertalk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = peertalk; sourceTree = "<group>"; };
 		500D70CC209A170700CC3470 /* MPShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPShare-Bridging-Header.h"; sourceTree = "<group>"; };
 		500D70CD209A173D00CC3470 /* PTChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTChannel.m; path = MPShare/peertalk/PTChannel.m; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		50AC20B2209A0942008586C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AC20B4209A0942008586C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50AC20C0209A099B008586C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C23387B832A20E4DA8301DB5 /* Pods-MPShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPShare/Pods-MPShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51A4CCBE32C9BD90E9ECF6B /* Pods_MPShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +60,8 @@
 				50AC20C0209A099B008586C1 /* README.md */,
 				50AC20A7209A0942008586C1 /* MPShare */,
 				50AC20A6209A0942008586C1 /* Products */,
+				AC97859E345EEF82977C7BCF /* Pods */,
+				600778C7C1D5B50FFA0E6BD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,23 @@
 			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
+		600778C7C1D5B50FFA0E6BD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E80B14E35053D8BE1F9B541 /* Pods_MPShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC97859E345EEF82977C7BCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC85892409A0FFF77D155B /* Pods-MPShare.debug.xcconfig */,
+				C23387B832A20E4DA8301DB5 /* Pods-MPShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50AC20B7209A0942008586C1 /* Build configuration list for PBXNativeTarget "MPShare" */;
 			buildPhases = (
+				2EA29CABCBE4CFF62A1BB307 /* [CP] Check Pods Manifest.lock */,
 				50AC20A1209A0942008586C1 /* Sources */,
 				50AC20A2209A0942008586C1 /* Frameworks */,
 				50AC20A3209A0942008586C1 /* Resources */,
+				4075A6BCFF92DE39B2921357 /* [CP] Embed Pods Frameworks */,
+				E3795D90A0337D6DCDCA6318 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +222,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EA29CABCBE4CFF62A1BB307 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4075A6BCFF92DE39B2921357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MPShare/Pods-MPShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3795D90A0337D6DCDCA6318 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MPShare/Pods-MPShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50AC20A1209A0942008586C1 /* Sources */ = {
@@ -340,8 +415,10 @@
 		};
 		50AC20B8209A0942008586C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ECC85892409A0FFF77D155B /* Pods-MPShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = MPShare/Info.plist;
@@ -357,8 +434,10 @@
 		};
 		50AC20B9209A0942008586C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C23387B832A20E4DA8301DB5 /* Pods-MPShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = MPShare/Info.plist;
