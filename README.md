@@ -6,7 +6,6 @@
 - RealmSwift
 - IGListKit
 - AWSS3
-- AWSCore
 - AWSCognito 
 
 
