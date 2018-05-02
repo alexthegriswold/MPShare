@@ -76,7 +76,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         photoSetData = realm.objects(RealmPhotoSet.self)
         
         //sort the realm data from newest to oldest
-        let sortedPhotoSets = photoSetData.sorted(byKeyPath: "timeReceived", ascending: false)
+        //let sortedPhotoSets = photoSetData.sorted(byKeyPath: "timeReceived", ascending: false)
     }
     
     //MARK: Navigation
