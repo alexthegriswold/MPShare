@@ -29,6 +29,10 @@
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
 		50AC20B0209A0942008586C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AF209A0942008586C1 /* Assets.xcassets */; };
 		50AC20B3209A0942008586C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */; };
+		50EAD330209A8C580005D2D0 /* PTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD32F209A8C580005D2D0 /* PTManager.swift */; };
+		50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD332209A8C9A0005D2D0 /* Helper.swift */; };
+		50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */; };
+		50EAD339209A8D7E0005D2D0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD338209A8D7E0005D2D0 /* RealmManager.swift */; };
 		E51A4CCBE32C9BD90E9ECF6B /* Pods_MPShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E80B14E35053D8BE1F9B541 /* Pods_MPShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,10 @@
 		50AC20B2209A0942008586C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AC20B4209A0942008586C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50AC20C0209A099B008586C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50EAD32F209A8C580005D2D0 /* PTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTManager.swift; sourceTree = "<group>"; };
+		50EAD332209A8C9A0005D2D0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReceiver.swift; sourceTree = "<group>"; };
+		50EAD338209A8D7E0005D2D0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C23387B832A20E4DA8301DB5 /* Pods-MPShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPShare/Pods-MPShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +159,8 @@
 		50AC20A7209A0942008586C1 /* MPShare */ = {
 			isa = PBXGroup;
 			children = (
+				50EAD331209A8C870005D2D0 /* Helper Files */,
+				50EAD32E209A8C3F0005D2D0 /* Objects */,
 				506F916B209A23BB005F47D7 /* View Cells */,
 				506F9164209A2261005F47D7 /* View Models */,
 				506F9161209A2198005F47D7 /* Section Controllers */,
@@ -212,6 +222,24 @@
 				50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */,
 			);
 			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		50EAD32E209A8C3F0005D2D0 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				50EAD32F209A8C580005D2D0 /* PTManager.swift */,
+				50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */,
+				50EAD338209A8D7E0005D2D0 /* RealmManager.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		50EAD331209A8C870005D2D0 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				50EAD332209A8C9A0005D2D0 /* Helper.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		600778C7C1D5B50FFA0E6BD4 /* Frameworks */ = {
@@ -360,11 +388,15 @@
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
 				506F9166209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift in Sources */,
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
+				50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */,
+				50EAD330209A8C580005D2D0 /* PTManager.swift in Sources */,
 				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
+				50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */,
 				506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */,
 				506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */,
 				50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */,
 				50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */,
+				50EAD339209A8D7E0005D2D0 /* RealmManager.swift in Sources */,
 				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
 				506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */,
 				506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */,

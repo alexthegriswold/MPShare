@@ -15,10 +15,6 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Views
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    //MARK: Realm
-    let realm = try! Realm()
-    var photoSetData: Results<RealmPhotoSet>!
-
     //MARK: IGListKitAdapert
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
@@ -38,8 +34,6 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         collectionView.showsVerticalScrollIndicator = false
         collectionView.alwaysBounceVertical = true
         view.addSubview(collectionView)
-        
-        getRealmData()
         
         //add the header
         let mainHeader = MainHeaderModel(text: "MobilePic")
@@ -71,14 +65,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         collectionView.frame = CGRect(x: 0, y: 0, width: 1024, height: 768)
     }
     
-    //gets the sorted realm data and pushes it to the photoset array 
-    func getRealmData() {
-        photoSetData = realm.objects(RealmPhotoSet.self)
-        
-        //sort the realm data from newest to oldest
-        //let sortedPhotoSets = photoSetData.sorted(byKeyPath: "timeReceived", ascending: false)
-    }
-    
+
     //MARK: Navigation
     func didTapCell(viewModelObject: PhotoSetViewModel, section: Int) {
         //transistion
