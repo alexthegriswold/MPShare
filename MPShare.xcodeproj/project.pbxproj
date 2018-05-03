@@ -33,6 +33,9 @@
 		50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD332209A8C9A0005D2D0 /* Helper.swift */; };
 		50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */; };
 		50EAD339209A8D7E0005D2D0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD338209A8D7E0005D2D0 /* RealmManager.swift */; };
+		50EAD33B209A91730005D2D0 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD33A209A91730005D2D0 /* ImageHandler.swift */; };
+		50EAD33D209A92320005D2D0 /* AWSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD33C209A92320005D2D0 /* AWSManager.swift */; };
+		50EAD33F209A92750005D2D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD33E209A92750005D2D0 /* Constants.swift */; };
 		E51A4CCBE32C9BD90E9ECF6B /* Pods_MPShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E80B14E35053D8BE1F9B541 /* Pods_MPShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		50EAD332209A8C9A0005D2D0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReceiver.swift; sourceTree = "<group>"; };
 		50EAD338209A8D7E0005D2D0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		50EAD33A209A91730005D2D0 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		50EAD33C209A92320005D2D0 /* AWSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSManager.swift; sourceTree = "<group>"; };
+		50EAD33E209A92750005D2D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C23387B832A20E4DA8301DB5 /* Pods-MPShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPShare/Pods-MPShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +235,8 @@
 			children = (
 				50EAD32F209A8C580005D2D0 /* PTManager.swift */,
 				50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */,
+				50EAD33C209A92320005D2D0 /* AWSManager.swift */,
+				50EAD33A209A91730005D2D0 /* ImageHandler.swift */,
 				50EAD338209A8D7E0005D2D0 /* RealmManager.swift */,
 			);
 			path = Objects;
@@ -238,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				50EAD332209A8C9A0005D2D0 /* Helper.swift */,
+				50EAD33E209A92750005D2D0 /* Constants.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -383,13 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EAD33F209A92750005D2D0 /* Constants.swift in Sources */,
 				506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */,
+				50EAD33D209A92320005D2D0 /* AWSManager.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
 				506F9166209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift in Sources */,
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
 				50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */,
 				50EAD330209A8C580005D2D0 /* PTManager.swift in Sources */,
+				50EAD33B209A91730005D2D0 /* ImageHandler.swift in Sources */,
 				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
 				50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */,
 				506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */,

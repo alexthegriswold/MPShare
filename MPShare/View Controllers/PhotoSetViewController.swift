@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import IGListKit
 
-class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollViewDelegate, PhotoSetSectionControllerDelegate {
+class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollViewDelegate, PhotoSetSectionControllerDelegate, ImageReceiverDelegate {
     
     //MARK: Views
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -23,8 +23,16 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Data Source
     var photoSets = [Any]()
     
+    //MARK: Image Receiver
+    var imageReceiver = ImageReceiver()
+    
+    //MARK: Realm Manager
+    var realmManager = RealmManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageReceiver.delegate = self
         
         //hide the navigation bar
         self.navigationController?.navigationBar.isHidden = true
@@ -39,24 +47,15 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         let mainHeader = MainHeaderModel(text: "MobilePic")
         photoSets.insert(mainHeader, at: 0)
         
+        let sortedPhotoSets = realmManager.getSortedData()
+        for photoSet in sortedPhotoSets {
+            photoSets.append(photoSet)
+        }
+        
         adapter.collectionView = collectionView
         adapter.dataSource = self //the data source must be set after the data is initialized
         adapter.scrollViewDelegate = self
    
-    }
-    
-    func saveImageToDocumentDirectory(image: UIImage, imageName: String) {
-        
-        let imageData = UIImageJPEGRepresentation(image, 1.0)
-        let docDir = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let imageURL = docDir.appendingPathComponent("\(imageName)")
-        
-        do {
-            try imageData?.write(to: imageURL)
-            print("saving to: ", imageURL)
-        } catch let error as NSError {
-            print(error)
-        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,6 +73,14 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //hides the status bar from the app
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    //MARK: Image Receiver Delegate Method
+    func didReceivePhotoSet(photoSet: PhotoSet) {
+        photoSets.insert(photoSet, at: 1)
+        DispatchQueue.main.async {
+            self.adapter.performUpdates(animated: true, completion: nil)
+        }
     }
     
     // MARK: ListAdapterDataSource
