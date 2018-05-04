@@ -29,7 +29,7 @@ final class MainHeaderCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
-        largeLabel.frame = CGRect(x: 434, y: 39, width: 614, height: 47)
+        largeLabel.frame = CGRect(x: 454, y: 39, width: 614, height: 47)
     }
     
 }

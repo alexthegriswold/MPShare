@@ -27,7 +27,7 @@ final class PhotoSetHeaderCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
-        timeLabel.frame = CGRect(x: 434, y: 10, width: 614, height: 40)
+        timeLabel.frame = CGRect(x: 454, y: 10, width: 614, height: 40)
     }
     
     func calculateTheTime(photoSetDate: Date) -> String{

@@ -35,7 +35,7 @@ final class PhotoSetCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        imageView.frame = CGRect(x: 420, y: 0, width: 540, height: 369)
+        imageView.frame = CGRect(x: 440, y: 0, width: 540, height: 369)
         imageView.layer.cornerRadius = 10
         outerView.frame = imageView.frame
         outerView.clipsToBounds = false

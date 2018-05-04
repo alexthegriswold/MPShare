@@ -25,6 +25,8 @@
 		506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */; };
 		506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */; };
 		5090CE57209C907B00B2ABEA /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE56209C907B00B2ABEA /* InstructionView.swift */; };
+		5090CE59209C943F00B2ABEA /* WordAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE58209C943F00B2ABEA /* WordAnimator.swift */; };
+		5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */; };
 		50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20A8209A0942008586C1 /* AppDelegate.swift */; };
 		50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */; };
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderViewModel.swift; sourceTree = "<group>"; };
 		506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderSectionController.swift; sourceTree = "<group>"; };
 		5090CE56209C907B00B2ABEA /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		5090CE58209C943F00B2ABEA /* WordAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAnimator.swift; sourceTree = "<group>"; };
+		5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
 		50AC20A5209A0942008586C1 /* MPShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC20A8209A0942008586C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				50EAD33C209A92320005D2D0 /* AWSManager.swift */,
 				50EAD33A209A91730005D2D0 /* ImageHandler.swift */,
 				50EAD338209A8D7E0005D2D0 /* RealmManager.swift */,
+				5090CE58209C943F00B2ABEA /* WordAnimator.swift */,
+				5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -424,11 +430,13 @@
 				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
 				506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */,
 				506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */,
+				5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */,
 				506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */,
 				506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */,
 				506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */,
 				506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */,
 				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
+				5090CE59209C943F00B2ABEA /* WordAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
