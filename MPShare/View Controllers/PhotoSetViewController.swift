@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import IGListKit
 
-class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollViewDelegate, PhotoSetSectionControllerDelegate, ImageReceiverDelegate {
+class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollViewDelegate, PhotoSetSectionControllerDelegate, WireFrameActionDelegate, ImageReceiverDelegate {
     
     //MARK: Views
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -35,7 +35,10 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set delegate methods
         imageReceiver.delegate = self
+        instructionView.instructionViewPanel.wireFrame.delegate = self
+        
         
         //hide the navigation bar
         self.navigationController?.navigationBar.isHidden = true
@@ -86,6 +89,11 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         DispatchQueue.main.async {
             self.adapter.performUpdates(animated: true, completion: nil)
         }
+    }
+    
+    //MARK: Wire frame delegate
+    func didHoldOnWireFrame() {
+        print("Holding on wireframe")
     }
     
     // MARK: ListAdapterDataSource
