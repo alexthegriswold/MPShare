@@ -65,13 +65,14 @@ class AWSManager: NSObject {
             })
         }
         
-        
         //var imageData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "collage"), 1.0)
         //self.uploadImage(with: imageData!, name: "Collage2.jpg")
         
         //imageData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "collage"), 1.0)
         //self.uploadImage(with: imageData!, name: "Collage3.jpg")
     }
+    
+    
     
     func configure() {
         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:8076fbc0-5bf7-4727-8ff9-ec2c2fb2c5eb")

@@ -14,6 +14,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     
     //MARK: Views
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let instructionView = InstructionView(frame: .zero)
     
     //MARK: IGListKitAdapert
     lazy var adapter: ListAdapter = {
@@ -29,6 +30,8 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Realm Manager
     var realmManager = RealmManager()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +45,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         collectionView.showsVerticalScrollIndicator = false
         collectionView.alwaysBounceVertical = true
         view.addSubview(collectionView)
+        view.addSubview(instructionView)
         
         //add the header
         let mainHeader = MainHeaderModel(text: "MobilePic")
@@ -62,6 +66,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         super.viewDidLayoutSubviews()
         
         collectionView.frame = CGRect(x: 0, y: 0, width: 1024, height: 768)
+        instructionView.frame = CGRect(x: 0, y: 0, width: 410, height: 768)
     }
     
 

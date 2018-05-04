@@ -24,6 +24,7 @@
 		506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9170209A24CB005F47D7 /* MainHeaderCell.swift */; };
 		506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */; };
 		506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */; };
+		5090CE57209C907B00B2ABEA /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE56209C907B00B2ABEA /* InstructionView.swift */; };
 		50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20A8209A0942008586C1 /* AppDelegate.swift */; };
 		50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */; };
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		506F9170209A24CB005F47D7 /* MainHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderCell.swift; sourceTree = "<group>"; };
 		506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderViewModel.swift; sourceTree = "<group>"; };
 		506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderSectionController.swift; sourceTree = "<group>"; };
+		5090CE56209C907B00B2ABEA /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		50AC20A5209A0942008586C1 /* MPShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC20A8209A0942008586C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = "View Cells";
 			sourceTree = "<group>";
 		};
+		5090CE55209C904600B2ABEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5090CE56209C907B00B2ABEA /* InstructionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		50AC209C209A0942008586C1 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		50AC20A7209A0942008586C1 /* MPShare */ = {
 			isa = PBXGroup;
 			children = (
+				5090CE55209C904600B2ABEA /* Views */,
 				50EAD331209A8C870005D2D0 /* Helper Files */,
 				50EAD32E209A8C3F0005D2D0 /* Objects */,
 				506F916B209A23BB005F47D7 /* View Cells */,
@@ -407,6 +418,7 @@
 				506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */,
 				506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */,
 				50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */,
+				5090CE57209C907B00B2ABEA /* InstructionView.swift in Sources */,
 				50AC20A9209A0942008586C1 /* AppDelegate.swift in Sources */,
 				50EAD339209A8D7E0005D2D0 /* RealmManager.swift in Sources */,
 				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
