@@ -76,6 +76,9 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Navigation
     func didTapCell(viewModelObject: PhotoSetViewModel, section: Int) {
         //transistion
+        let viewModel = SelectionViewModel(imageUrl: viewModelObject.imageUrl, photoSet: viewModelObject.photoSet)
+        let viewController = SelectionViewController(viewModel: viewModel, printer: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     //hides the status bar from the app

@@ -35,6 +35,11 @@
 		50AC20AE209A0942008586C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AC209A0942008586C1 /* Main.storyboard */; };
 		50AC20B0209A0942008586C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20AF209A0942008586C1 /* Assets.xcassets */; };
 		50AC20B3209A0942008586C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */; };
+		50B3914920A20805003375BF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3914820A20805003375BF /* SelectionViewController.swift */; };
+		50B3914B20A20896003375BF /* SelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3914A20A20896003375BF /* SelectionViewModel.swift */; };
+		50B3914E20A2095A003375BF /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3914D20A2095A003375BF /* BackButton.swift */; };
+		50B3915020A20AF8003375BF /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3914F20A20AF8003375BF /* SelectionView.swift */; };
+		50B3915220A20B2A003375BF /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3915120A20B2A003375BF /* ButtonView.swift */; };
 		50EAD330209A8C580005D2D0 /* PTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD32F209A8C580005D2D0 /* PTManager.swift */; };
 		50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD332209A8C9A0005D2D0 /* Helper.swift */; };
 		50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */; };
@@ -80,6 +85,11 @@
 		50AC20B2209A0942008586C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AC20B4209A0942008586C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50AC20C0209A099B008586C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50B3914820A20805003375BF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		50B3914A20A20896003375BF /* SelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewModel.swift; sourceTree = "<group>"; };
+		50B3914D20A2095A003375BF /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		50B3914F20A20AF8003375BF /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		50B3915120A20B2A003375BF /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		50EAD32F209A8C580005D2D0 /* PTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTManager.swift; sourceTree = "<group>"; };
 		50EAD332209A8C9A0005D2D0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		50EAD334209A8CCC0005D2D0 /* ImageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReceiver.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 				506F9165209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift */,
 				506F9167209A22D5005F47D7 /* PhotoSetViewModel.swift */,
 				506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */,
+				50B3914A20A20896003375BF /* SelectionViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 				5090CE5C209C9F6000B2ABEA /* InstructionView.swift */,
 				5090CE5E209C9F6E00B2ABEA /* InstructionViewPanel.swift */,
 				5090CE60209C9F7700B2ABEA /* WireFrame.swift */,
+				50B3914F20A20AF8003375BF /* SelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +200,7 @@
 		50AC20A7209A0942008586C1 /* MPShare */ = {
 			isa = PBXGroup;
 			children = (
+				50B3914C20A2094E003375BF /* Buttons */,
 				5090CE55209C904600B2ABEA /* Views */,
 				50EAD331209A8C870005D2D0 /* Helper Files */,
 				50EAD32E209A8C3F0005D2D0 /* Objects */,
@@ -217,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */,
+				50B3914820A20805003375BF /* SelectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -252,6 +266,15 @@
 				50AC20B1209A0942008586C1 /* LaunchScreen.storyboard */,
 			);
 			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		50B3914C20A2094E003375BF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				50B3914D20A2095A003375BF /* BackButton.swift */,
+				50B3915120A20B2A003375BF /* ButtonView.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		50EAD32E209A8C3F0005D2D0 /* Objects */ = {
@@ -423,6 +446,8 @@
 				50EAD33D209A92320005D2D0 /* AWSManager.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
+				50B3914B20A20896003375BF /* SelectionViewModel.swift in Sources */,
+				50B3914E20A2095A003375BF /* BackButton.swift in Sources */,
 				506F9166209A22AB005F47D7 /* PhotoSetHeaderViewModel.swift in Sources */,
 				5090CE5F209C9F6E00B2ABEA /* InstructionViewPanel.swift in Sources */,
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
@@ -431,6 +456,7 @@
 				50EAD33B209A91730005D2D0 /* ImageHandler.swift in Sources */,
 				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
 				50EAD333209A8C9A0005D2D0 /* Helper.swift in Sources */,
+				50B3915020A20AF8003375BF /* SelectionView.swift in Sources */,
 				506F916F209A2431005F47D7 /* PhotoSetHeaderCell.swift in Sources */,
 				506F9160209A1D8A005F47D7 /* PeertalkPhotoSet.swift in Sources */,
 				50AC20AB209A0942008586C1 /* PhotoSetViewController.swift in Sources */,
@@ -441,12 +467,14 @@
 				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
 				506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */,
 				506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */,
+				50B3915220A20B2A003375BF /* ButtonView.swift in Sources */,
 				5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */,
 				506F915C209A1D48005F47D7 /* PhotoSet.swift in Sources */,
 				506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */,
 				506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */,
 				506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */,
 				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
+				50B3914920A20805003375BF /* SelectionViewController.swift in Sources */,
 				5090CE5D209C9F6000B2ABEA /* InstructionView.swift in Sources */,
 				5090CE59209C943F00B2ABEA /* WordAnimator.swift in Sources */,
 			);
