@@ -28,6 +28,33 @@ class ImageReceiver: NSObject, PTManagerDelegate {
         // Setup the PTManager
         ptManager.delegate = self
         ptManager.connect(portNumber: PORT_NUMBER)
+        
+        saveImage(image: #imageLiteral(resourceName: "test"))
+        
+    }
+    
+    func saveImage(image: UIImage) {
+        
+        self.usbPhotoSet.addImage(image: image)
+        
+        if self.usbPhotoSet.images.count == imageCount {
+            
+            for image in self.usbPhotoSet.images {
+                imageHandler.addImage(image: image)
+            }
+            
+            let photoSet = imageHandler.createPhotoSet()
+            delegate?.didReceivePhotoSet(photoSet: photoSet)
+            let realmPhotoSet = imageHandler.createRealmPhotoSet(photoSet: photoSet)
+            
+            //gets everything ready for another go
+            imageHandler.resetObject()
+            try! realm.write {
+                realm.add(realmPhotoSet)
+            }
+            
+            self.usbPhotoSet.removeAllImages()
+        }
     }
     
     func peertalk(shouldAcceptDataOfType type: UInt32) -> Bool {
@@ -41,27 +68,7 @@ class ImageReceiver: NSObject, PTManagerDelegate {
             print("receveived image")
             let image = UIImage(data: data)
             if let image = image {
-                self.usbPhotoSet.addImage(image: image)
-                
-                if self.usbPhotoSet.images.count == imageCount {
-                    
-                    for image in self.usbPhotoSet.images {
-                        imageHandler.addImage(image: image)
-                    }
-                    
-                    let photoSet = imageHandler.createPhotoSet()
-                    delegate?.didReceivePhotoSet(photoSet: photoSet)
-                    let realmPhotoSet = imageHandler.createRealmPhotoSet(photoSet: photoSet)
-                    
-                    //gets everything ready for another go
-                    imageHandler.resetObject()
-                    try! realm.write {
-                        realm.add(realmPhotoSet)
-                    }
-                    
-                    self.usbPhotoSet.removeAllImages()
-                }
-                
+                saveImage(image: image)
                 ptManager.sendObject(object: 1, type: PTType.number.rawValue)
             }
         }
@@ -74,7 +81,6 @@ class ImageReceiver: NSObject, PTManagerDelegate {
             //change
             if usbPhotoSet.isFull == false {
                 usbPhotoSet.removeAllImages()
-                
             }
         }
     }
