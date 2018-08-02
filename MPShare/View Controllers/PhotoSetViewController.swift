@@ -35,6 +35,8 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Hello, world!")
+        
         //set delegate methods
         imageReceiver.delegate = self
         instructionView.instructionViewPanel.wireFrame.delegate = self
