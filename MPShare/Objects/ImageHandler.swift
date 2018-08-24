@@ -134,32 +134,32 @@ class ImageHandler: NSObject {
         names.removeAll()
     }
     
-    /*
-    func getTestData() -> [PhotoSetModel] {
-        let myDate = Date.init()
-        var photoSets = [PhotoSetModel]()
-        addTestDataToDocuments()
-        
-        let imageNames1 = ["testImage1", "testImage3", "testImage2", "testCollage1"]
-        let imageNames2 = ["testCollage2", "testCollage2", "testCollage2", "testCollage2"]
-        
-        let photoSet = PhotoSetModel(photoSetID: "testCollage1", imagesNames: imageNames1, timeReceived: myDate)
-        let photoSet2 = PhotoSetModel(photoSetID: "testCollage2", imagesNames: imageNames2, timeReceived: myDate)
-        
-        photoSets.append(photoSet)
-        photoSets.append(photoSet2)
-        
-        return photoSets
-    }
     
-    private func addTestDataToDocuments() {
-        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage1"), imageName: "testImage1")
-        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage3"), imageName: "testImage2")
-        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage2"), imageName: "testImage3")
-        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testCollage1"), imageName: "testCollage1")
-        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "TestCollage2"), imageName: "testCollage2")
-    }
- */
+//    func getTestData() -> [PhotoSetModel] {
+//        let myDate = Date.init()
+//        var photoSets = [PhotoSetModel]()
+//        addTestDataToDocuments()
+//        
+//        let imageNames1 = ["testImage1", "testImage3", "testImage2", "testCollage1"]
+//        let imageNames2 = ["testCollage2", "testCollage2", "testCollage2", "testCollage2"]
+//        
+//        let photoSet = PhotoSetModel(photoSetID: "testCollage1", imagesNames: imageNames1, timeReceived: myDate)
+//        let photoSet2 = PhotoSetModel(photoSetID: "testCollage2", imagesNames: imageNames2, timeReceived: myDate)
+//        
+//        photoSets.append(photoSet)
+//        photoSets.append(photoSet2)
+//        
+//        return photoSets
+//    }
+//    
+//    private func addTestDataToDocuments() {
+//        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage1"), imageName: "testImage1")
+//        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage3"), imageName: "testImage2")
+//        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testImage2"), imageName: "testImage3")
+//        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "testCollage1"), imageName: "testCollage1")
+//        saveImageToDocumentDirectory(image: #imageLiteral(resourceName: "TestCollage2"), imageName: "testCollage2")
+//    }
+ 
  
     func deletePhotoSetFromDirectory(photoSetModel: PhotoSet) {
         
