@@ -16,7 +16,6 @@ class TextingViewController: UIViewController, UIViewControllerTransitioningDele
     let backButton = BackButton()
     let textingView: TextingView
 
-
     init(viewModel: TextingViewModel) {
         self.textingViewModel = viewModel
         self.textingView = TextingView(frame: .zero, imageCount: 1, imageUrls: viewModel.imageNames)
@@ -27,16 +26,14 @@ class TextingViewController: UIViewController, UIViewControllerTransitioningDele
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         backButton.addTarget(self, action: #selector(TextingViewController.didTapBack), for: .touchUpInside)
         
         //add subviews
-        view.addSubview(textingView)
-        view.addSubview(backButton)
-        
+        [textingView, backButton].forEach { view.addSubview($0) }
+
         //setup delegates
         textingView.pinPadView.submitButton.textingDelegate = self
     }
@@ -50,7 +47,6 @@ class TextingViewController: UIViewController, UIViewControllerTransitioningDele
         
         textingView.frame = CGRect(x: 0, y: 0, width: 1024, height: 768)
         backButton.frame = CGRect(x: 30, y: 30, width: 100, height: 34)
-        
     }
     
     override var prefersStatusBarHidden: Bool {

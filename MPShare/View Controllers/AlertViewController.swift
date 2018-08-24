@@ -27,8 +27,6 @@ class AlertViewController: UIViewController, AlertViewButtonDelegate {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(AlertViewController.didSwipeDown))
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
-        
-        print(self.view.bounds)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,7 +34,7 @@ class AlertViewController: UIViewController, AlertViewButtonDelegate {
     }
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
     
     @objc func didSwipeDown() {

@@ -40,10 +40,8 @@ class AlertView: UIView {
         super.init(frame: frame)
         self.frame = CGRect(x: 0, y: 0, width: 540, height: 768)
         self.backgroundColor = UIColor.white
-        self.addSubview(titleLabel)
-        self.addSubview(subtitle)
-        //self.addSubview(textButton)
-        self.addSubview(homeButton)
+
+        [titleLabel, subtitle, homeButton].forEach { addSubview($0) }
         
         textButton.addTarget(self, action: #selector(AlertView.didTapText), for: .touchUpInside)
         homeButton.addTarget(self, action: #selector(AlertView.didTapHome), for: .touchUpInside)
@@ -56,12 +54,10 @@ class AlertView: UIView {
     override func layoutSubviews() {
         titleLabel.frame = CGRect(x: 0, y: 58, width: 540, height: 80)
         subtitle.frame = CGRect(x: 40, y: 254, width: 440, height: 113)
-        //textButton.frame.origin = CGPoint(x: 62, y: 504)
         homeButton.frame.origin = CGPoint(x: 182.5, y: 504)
     }
     
     @objc func didTapText() {
-        
         delegate?.didTapText()
     }
     

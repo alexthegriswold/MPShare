@@ -28,6 +28,11 @@
 		508323152130C56B00D965FE /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323142130C56B00D965FE /* AlertView.swift */; };
 		508323172130C5B700D965FE /* ButtonWithRoundedEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */; };
 		508323192130C5D500D965FE /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323182130C5D500D965FE /* AlertViewModel.swift */; };
+		5083231B2130C70700D965FE /* PrintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083231A2130C70600D965FE /* PrintingViewController.swift */; };
+		5083231D2130C79500D965FE /* PrintingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083231C2130C79500D965FE /* PrintingViewModel.swift */; };
+		5083231F2130C7E700D965FE /* PrintingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083231E2130C7E700D965FE /* PrintingView.swift */; };
+		508323212130C83400D965FE /* PrintInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323202130C83400D965FE /* PrintInputView.swift */; };
+		508323232130C87F00D965FE /* PrintInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323222130C87F00D965FE /* PrintInputButton.swift */; };
 		5090CE57209C907B00B2ABEA /* NewInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE56209C907B00B2ABEA /* NewInstructionView.swift */; };
 		5090CE59209C943F00B2ABEA /* WordAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE58209C943F00B2ABEA /* WordAnimator.swift */; };
 		5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */; };
@@ -87,6 +92,11 @@
 		508323142130C56B00D965FE /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithRoundedEdges.swift; sourceTree = "<group>"; };
 		508323182130C5D500D965FE /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		5083231A2130C70600D965FE /* PrintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingViewController.swift; sourceTree = "<group>"; };
+		5083231C2130C79500D965FE /* PrintingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingViewModel.swift; sourceTree = "<group>"; };
+		5083231E2130C7E700D965FE /* PrintingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingView.swift; sourceTree = "<group>"; };
+		508323202130C83400D965FE /* PrintInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintInputView.swift; sourceTree = "<group>"; };
+		508323222130C87F00D965FE /* PrintInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintInputButton.swift; sourceTree = "<group>"; };
 		5090CE56209C907B00B2ABEA /* NewInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInstructionView.swift; sourceTree = "<group>"; };
 		5090CE58209C943F00B2ABEA /* WordAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAnimator.swift; sourceTree = "<group>"; };
 		5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 				50B3914A20A20896003375BF /* SelectionViewModel.swift */,
 				50B3915D20A219C7003375BF /* TextingViewModel.swift */,
 				508323182130C5D500D965FE /* AlertViewModel.swift */,
+				5083231C2130C79500D965FE /* PrintingViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -200,7 +211,8 @@
 				50B3915720A218B2003375BF /* TextingView.swift */,
 				50B3915920A21950003375BF /* PinPadView.swift */,
 				508323142130C56B00D965FE /* AlertView.swift */,
-				508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */,
+				5083231E2130C7E700D965FE /* PrintingView.swift */,
+				508323202130C83400D965FE /* PrintInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +276,7 @@
 				50B3914820A20805003375BF /* SelectionViewController.swift */,
 				50B3915320A21724003375BF /* TextingViewController.swift */,
 				508323122130C52400D965FE /* AlertViewController.swift */,
+				5083231A2130C70600D965FE /* PrintingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -308,6 +321,8 @@
 				50B3915120A20B2A003375BF /* ButtonView.swift */,
 				50B3915B20A21971003375BF /* PinPadButton.swift */,
 				50B3915F20A21A56003375BF /* DeleteButton.swift */,
+				508323222130C87F00D965FE /* PrintInputButton.swift */,
+				508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -480,7 +495,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EAD33F209A92750005D2D0 /* Constants.swift in Sources */,
+				5083231F2130C7E700D965FE /* PrintingView.swift in Sources */,
 				506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */,
+				508323212130C83400D965FE /* PrintInputView.swift in Sources */,
 				50EAD33D209A92320005D2D0 /* AWSManager.swift in Sources */,
 				508323192130C5D500D965FE /* AlertViewModel.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
@@ -508,10 +525,12 @@
 				5090CE61209C9F7700B2ABEA /* WireFrame.swift in Sources */,
 				50EAD339209A8D7E0005D2D0 /* RealmManager.swift in Sources */,
 				50FB995E20A36B5E0090979A /* TextMessage.swift in Sources */,
+				5083231D2130C79500D965FE /* PrintingViewModel.swift in Sources */,
 				506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */,
 				506F9168209A22D5005F47D7 /* PhotoSetViewModel.swift in Sources */,
 				50B3915620A21851003375BF /* TextManager.swift in Sources */,
 				506F9163209A21BA005F47D7 /* PhotoSetSectionController.swift in Sources */,
+				5083231B2130C70700D965FE /* PrintingViewController.swift in Sources */,
 				50B3915220A20B2A003375BF /* ButtonView.swift in Sources */,
 				5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */,
 				50B3915420A21724003375BF /* TextingViewController.swift in Sources */,
@@ -523,6 +542,7 @@
 				50B3915A20A21950003375BF /* PinPadView.swift in Sources */,
 				506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */,
 				508323152130C56B00D965FE /* AlertView.swift in Sources */,
+				508323232130C87F00D965FE /* PrintInputButton.swift in Sources */,
 				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
 				50B3914920A20805003375BF /* SelectionViewController.swift in Sources */,
 				5090CE5D209C9F6000B2ABEA /* InstructionView.swift in Sources */,

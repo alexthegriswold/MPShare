@@ -11,7 +11,6 @@ import UIKit
 class TextingView: UIView, PinPadButtonActionDelegate, DeleteButtonActionDelegate {
     
     
-    //change
     let collageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleToFill
@@ -44,22 +43,28 @@ class TextingView: UIView, PinPadButtonActionDelegate, DeleteButtonActionDelegat
     }()
     let image3Shadow = UIView(frame: .zero)
     
-    let titleLabel = UILabel(frame: .zero)
+    let titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
+        label.text = "Your Photo"
+        return label
+    }()
     
-    let pinPadText = UILabel(frame: .zero)
+    let pinPadText: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.thin)
+        label.text = "Enter Number"
+        label.textAlignment = .center
+        return label
+    }()
     
     let pinPadView = PinPadView(frame: .zero)
-    
-    
     var phoneNumber = ""
     var imageCount: Int
-    
-    
     
     init(frame: CGRect, imageCount: Int, imageUrls: [String]) {
         
         self.imageCount = imageCount
-        
         super.init(frame: frame)
     
         //adds the four images to the view
@@ -74,24 +79,12 @@ class TextingView: UIView, PinPadButtonActionDelegate, DeleteButtonActionDelegat
             self.addImageWithShawdowToView(imageView: image3View, shadowView: image3Shadow)
         }
         
-        for button in pinPadView.buttons {
-            button.delegate = self
-        }
+        pinPadView.buttons.forEach { $0.delegate = self }
         pinPadView.deleteButton.delegate = self
         
-        
-        self.addSubview(pinPadView)
+        [pinPadView, titleLabel, pinPadText].forEach { addSubview($0) }
         
         self.backgroundColor = UIColor.white
-        
-        self.addSubview(titleLabel)
-        titleLabel.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
-        titleLabel.text = "Your Photo"
-        
-        self.addSubview(pinPadText)
-        pinPadText.font = UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.thin)
-        pinPadText.text = "Enter Number"
-        pinPadText.textAlignment = .center
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -134,7 +127,6 @@ class TextingView: UIView, PinPadButtonActionDelegate, DeleteButtonActionDelegat
             layoutImageWithShadow(frame: image2Rect, alexTest: image2View, shadowView: image2Shadow)
             layoutImageWithShadow(frame: image3Rect, alexTest: image3View, shadowView: image3Shadow)
         }
-        
         
         
         pinPadView.frame = CGRect(x: 681, y: 188, width: 294, height: 479)
