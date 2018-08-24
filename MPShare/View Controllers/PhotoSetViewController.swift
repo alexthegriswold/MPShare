@@ -27,6 +27,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Image Receiver
     var imageReceiver = ImageReceiver()
     
+    
     //MARK: Realm Manager
     var realmManager = RealmManager()
     
@@ -38,7 +39,6 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         //set delegate methods
         imageReceiver.delegate = self
         instructionView.instructionViewPanel.wireFrame.delegate = self
-        
         
         //hide the navigation bar
         self.navigationController?.navigationBar.isHidden = true
@@ -57,6 +57,10 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         let sortedPhotoSets = realmManager.getSortedData()
         for photoSet in sortedPhotoSets {
             photoSets.append(photoSet)
+        }
+        
+        if photoSets.count < 2 {
+            imageReceiver.saveImage(image: #imageLiteral(resourceName: "test"))
         }
         
         adapter.collectionView = collectionView

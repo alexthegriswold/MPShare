@@ -29,7 +29,7 @@ class ImageReceiver: NSObject, PTManagerDelegate {
         ptManager.delegate = self
         ptManager.connect(portNumber: PORT_NUMBER)
         
-        saveImage(image: #imageLiteral(resourceName: "test"))
+        //saveImage(image: #imageLiteral(resourceName: "test"))
         
     }
     
