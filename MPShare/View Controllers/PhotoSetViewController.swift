@@ -27,6 +27,7 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     //MARK: Image Receiver
     var imageReceiver = ImageReceiver()
     
+    
     //MARK: Realm Manager
     var realmManager = RealmManager()
     
@@ -39,7 +40,6 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         imageReceiver.delegate = self
         instructionView.instructionViewPanel.wireFrame.delegate = self
         
-        
         //hide the navigation bar
         self.navigationController?.navigationBar.isHidden = true
         
@@ -47,8 +47,8 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         collectionView.backgroundColor = UIColor(white: 1, alpha: 1)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.alwaysBounceVertical = true
-        view.addSubview(collectionView)
-        view.addSubview(instructionView)
+        
+        [collectionView, instructionView].forEach { view.addSubview($0) }
         
         //add the header
         let mainHeader = MainHeaderModel(text: "MobilePic")
@@ -59,10 +59,14 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
             photoSets.append(photoSet)
         }
         
+        //load test data if not in the database
+        if photoSets.count < 2 {
+            imageReceiver.saveImage(image: #imageLiteral(resourceName: "test"))
+        }
+        
         adapter.collectionView = collectionView
         adapter.dataSource = self //the data source must be set after the data is initialized
         adapter.scrollViewDelegate = self
-   
     }
     
     override func viewDidLayoutSubviews() {
@@ -72,7 +76,6 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
         instructionView.frame = CGRect(x: 0, y: 0, width: 410, height: 768)
     }
     
-
     //MARK: Navigation
     func didTapCell(viewModelObject: PhotoSetViewModel, section: Int) {
         //transistion
@@ -119,11 +122,9 @@ class PhotoSetViewController: UIViewController, ListAdapterDataSource, UIScrollV
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 

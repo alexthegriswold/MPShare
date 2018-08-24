@@ -41,31 +41,13 @@ class InstructionViewPanel: UIView, UIScrollViewDelegate {
     
     let scrollView = UIScrollView()
     
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
-        self.animatedLabels.append(phrase1)
-        self.animatedLabels.append(phrase2)
-        self.wordAnimator.setAnimatedLabels(animatedLabels: animatedLabels)
-        wordAnimator.startAnimating()
-        
-        self.addSubview(imageView)
-        self.addSubview(wireFrame)
-        for label in animatedLabels {
-            for line in label.lines {
-                for character in line {
-                    self.addSubview(character)
-                }
-            }
-        }
-        
-        
-        
-        
+        [imageView, wireFrame].forEach { addSubview($0) }
+        configureAnimatedLabels()
+        addAnimatedLabelsToView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,14 +59,22 @@ class InstructionViewPanel: UIView, UIScrollViewDelegate {
         
         imageView.frame = CGRect(x: 0, y: 0, width: 335, height: 690)
         textLabel.frame = CGRect(x: 0, y: 74, width: 335, height: 200)
-        
         wireFrame.frame = CGRect(x: 16, y: 350, width: 303, height: 203)
-        
-        /*
-         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 5, options: [.curveEaseInOut, .repeat], animations: {
-         self.wireFrame.frame = CGRect(x: 16, y: 350, width: 288, height: 193)
-         }, completion: nil)
-         */
-        
+    }
+    
+    func configureAnimatedLabels() {
+        [phrase1, phrase2].forEach { animatedLabels.append($0) }
+        self.wordAnimator.setAnimatedLabels(animatedLabels: animatedLabels)
+        wordAnimator.startAnimating()
+    }
+    
+    func addAnimatedLabelsToView() {
+        for label in animatedLabels {
+            for line in label.lines {
+                for character in line {
+                    self.addSubview(character)
+                }
+            }
+        }
     }
 }

@@ -18,8 +18,6 @@ class NewInstructionView: UIView {
         
         //24 left
         //64 right
-        
-        
         view.frame = CGRect(x: 44, y: 39, width: 335, height: 325.5)
         view.layer.cornerRadius = 10
         view.clipsToBounds = true

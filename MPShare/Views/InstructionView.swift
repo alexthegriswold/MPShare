@@ -17,15 +17,13 @@ class InstructionView: UIView {
         view.layer.shadowOffset = CGSize.zero
         view.layer.shadowRadius = 10
         view.layer.shouldRasterize = true
-        
         return view
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(outerView)
-        self.addSubview(instructionViewPanel)
+        [outerView, instructionViewPanel].forEach { addSubview($0) }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,8 +36,5 @@ class InstructionView: UIView {
         instructionViewPanel.frame = CGRect(x: 44, y: 39, width: 335, height: 690)
         outerView.frame = instructionViewPanel.frame
         outerView.layer.shadowPath = UIBezierPath(rect: instructionViewPanel.bounds).cgPath
-        
     }
-    
-    
 }

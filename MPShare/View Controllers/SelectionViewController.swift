@@ -28,22 +28,19 @@ class SelectionViewController: UIViewController, ButtonViewActionDelegate {
     }
     
     let backButton = BackButton()
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //add targets
         backButton.addTarget(self, action: #selector(SelectionViewController.didTapBack), for: .touchUpInside)
         
-        //add subview
-        self.view.addSubview(selectionView)
-        self.view.addSubview(backButton)
+        //add subviews
+        [selectionView, backButton].forEach { view.addSubview($0) }
     }
     
     @objc func didTapBack() {
@@ -62,28 +59,16 @@ class SelectionViewController: UIViewController, ButtonViewActionDelegate {
     }
 
     func didTapButton(name: String) {
-    
-        print(name)
-        /*
         if name == "Tap to text" {
-            let photoSet = viewModel.photoSet
-            
-            
-            //change
-            let textingViewModel = TextingViewModel(phoneNumber: "", imageNames: photoSet.imagesNames)
-            let viewController = TextingViewController(viewModel: textingViewModel)
-            viewController.transitioningDelegate = self
-            present(viewController, animated: true, completion: nil)
+            let viewModel = TextingViewModel(phoneNumber: "", imageNames: self.viewModel.photoSet.imagesNames)
+            let viewController = TextingViewController(viewModel: viewModel)
+            self.navigationController?.pushViewController(viewController, animated: true)
         } else if name == "Tap to print" {
-            
-            let printingViewModel = PrintingViewModel(collageUrl: (viewModel?.collageUrl)!)
-            let viewController = PrintingViewController(viewModel: printingViewModel, printer: printer)
-            viewController.transitioningDelegate = self
-            present(viewController, animated: true, completion: nil)
+            let viewModel = PrintingViewModel(imageUrl: self.viewModel.imageUrl)
+            let viewController = PrintingViewController(viewModel: viewModel, printer: printer)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
- */
     }
- 
 }
 
 

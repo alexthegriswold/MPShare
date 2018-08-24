@@ -42,7 +42,6 @@ class AWSManager: NSObject {
                     
                     let key = task.key
                     
-                    //this is broken. Not the way to do it
                     //gets the image url from the realm database and then filters it out.
                     let imageURL = self.realm.objects(ImageURL.self).filter("imageName == '\(key)'")
                     

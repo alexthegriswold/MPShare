@@ -29,22 +29,21 @@ class SelectionView: UIView {
         return view
     }()
     
-    let textButton = ButtonView()
-    let printButton = ButtonView()
+    let textButton: ButtonView = {
+        let button = ButtonView()
+        button.setTitle("Tap to text", for: .normal)
+        return button
+    }()
+    let printButton: ButtonView = {
+        let button = ButtonView()
+        button.setTitle("Tap to print", for: .normal)
+        return button
+    }()
     
     init(frame: CGRect, imageUrl: String) {
         super.init(frame: frame)
-        
-        //addButtons
-        textButton.setTitle("Tap to text", for: .normal)
-        printButton.setTitle("Tap to print", for: .normal)
-        
-        //add subviews
-        self.addSubview(outerView)
-        self.addSubview(imageView)
-        self.addSubview(textButton)
-        self.addSubview(printButton)
-        
+    
+        [outerView, imageView, textButton, printButton].forEach { addSubview($0) }
         self.backgroundColor = UIColor.white
     }
     
