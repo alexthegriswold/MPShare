@@ -24,6 +24,10 @@
 		506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9170209A24CB005F47D7 /* MainHeaderCell.swift */; };
 		506F9173209A2511005F47D7 /* MainHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */; };
 		506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */; };
+		508323132130C52400D965FE /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323122130C52400D965FE /* AlertViewController.swift */; };
+		508323152130C56B00D965FE /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323142130C56B00D965FE /* AlertView.swift */; };
+		508323172130C5B700D965FE /* ButtonWithRoundedEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */; };
+		508323192130C5D500D965FE /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508323182130C5D500D965FE /* AlertViewModel.swift */; };
 		5090CE57209C907B00B2ABEA /* NewInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE56209C907B00B2ABEA /* NewInstructionView.swift */; };
 		5090CE59209C943F00B2ABEA /* WordAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE58209C943F00B2ABEA /* WordAnimator.swift */; };
 		5090CE5B209C945E00B2ABEA /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */; };
@@ -79,6 +83,10 @@
 		506F9170209A24CB005F47D7 /* MainHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderCell.swift; sourceTree = "<group>"; };
 		506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderViewModel.swift; sourceTree = "<group>"; };
 		506F9174209A2619005F47D7 /* MainHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderSectionController.swift; sourceTree = "<group>"; };
+		508323122130C52400D965FE /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		508323142130C56B00D965FE /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithRoundedEdges.swift; sourceTree = "<group>"; };
+		508323182130C5D500D965FE /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		5090CE56209C907B00B2ABEA /* NewInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInstructionView.swift; sourceTree = "<group>"; };
 		5090CE58209C943F00B2ABEA /* WordAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAnimator.swift; sourceTree = "<group>"; };
 		5090CE5A209C945E00B2ABEA /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
@@ -166,6 +174,7 @@
 				506F9172209A2511005F47D7 /* MainHeaderViewModel.swift */,
 				50B3914A20A20896003375BF /* SelectionViewModel.swift */,
 				50B3915D20A219C7003375BF /* TextingViewModel.swift */,
+				508323182130C5D500D965FE /* AlertViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -190,6 +199,8 @@
 				50B3914F20A20AF8003375BF /* SelectionView.swift */,
 				50B3915720A218B2003375BF /* TextingView.swift */,
 				50B3915920A21950003375BF /* PinPadView.swift */,
+				508323142130C56B00D965FE /* AlertView.swift */,
+				508323162130C5B700D965FE /* ButtonWithRoundedEdges.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +263,7 @@
 				50AC20AA209A0942008586C1 /* PhotoSetViewController.swift */,
 				50B3914820A20805003375BF /* SelectionViewController.swift */,
 				50B3915320A21724003375BF /* TextingViewController.swift */,
+				508323122130C52400D965FE /* AlertViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -470,6 +482,7 @@
 				50EAD33F209A92750005D2D0 /* Constants.swift in Sources */,
 				506F915A209A1CFC005F47D7 /* ImageURL.swift in Sources */,
 				50EAD33D209A92320005D2D0 /* AWSManager.swift in Sources */,
+				508323192130C5D500D965FE /* AlertViewModel.swift in Sources */,
 				500D70D5209A17FD00CC3470 /* PTUSBHub.m in Sources */,
 				500D70D3209A17B900CC3470 /* PTProtocol.m in Sources */,
 				50B3915820A218B2003375BF /* TextingView.swift in Sources */,
@@ -480,6 +493,7 @@
 				500D70CE209A173D00CC3470 /* PTChannel.m in Sources */,
 				50EAD335209A8CCC0005D2D0 /* ImageReceiver.swift in Sources */,
 				50B3915E20A219C7003375BF /* TextingViewModel.swift in Sources */,
+				508323132130C52400D965FE /* AlertViewController.swift in Sources */,
 				50EAD330209A8C580005D2D0 /* PTManager.swift in Sources */,
 				50EAD33B209A91730005D2D0 /* ImageHandler.swift in Sources */,
 				506F9158209A1CCB005F47D7 /* RealmPhotoSet.swift in Sources */,
@@ -505,8 +519,10 @@
 				506F9171209A24CB005F47D7 /* MainHeaderCell.swift in Sources */,
 				50B3915C20A21971003375BF /* PinPadButton.swift in Sources */,
 				506F9175209A2619005F47D7 /* MainHeaderSectionController.swift in Sources */,
+				508323172130C5B700D965FE /* ButtonWithRoundedEdges.swift in Sources */,
 				50B3915A20A21950003375BF /* PinPadView.swift in Sources */,
 				506F916D209A23D5005F47D7 /* PhotoSetCell.swift in Sources */,
+				508323152130C56B00D965FE /* AlertView.swift in Sources */,
 				506F915E209A1D75005F47D7 /* MainHeaderModel.swift in Sources */,
 				50B3914920A20805003375BF /* SelectionViewController.swift in Sources */,
 				5090CE5D209C9F6000B2ABEA /* InstructionView.swift in Sources */,

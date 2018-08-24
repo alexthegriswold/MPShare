@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextingViewController: UIViewController, UIViewControllerTransitioningDelegate, SubmitButtonActionDelegate /*AlertViewControllerDelegate*/ {
+class TextingViewController: UIViewController, UIViewControllerTransitioningDelegate, SubmitButtonActionDelegate, AlertViewControllerDelegate {
     
     private var textingViewModel: TextingViewModel
     
@@ -78,11 +78,11 @@ class TextingViewController: UIViewController, UIViewControllerTransitioningDele
             }
             
             let textManager = TextManager(imageNames: imageNames, phoneNumber: keyboardInput)
-            //let alertViewModel = AlertViewModel(phrase: "I'm sending your pic now!\n You'll have it soon!")
-            //let alertViewController = AlertViewController(viewModel: alertViewModel)
-            //alertViewController.delegate = self
-            //alertViewController.modalPresentationStyle = .formSheet
-            //self.present(alertViewController, animated: true, completion: nil)
+            let alertViewModel = AlertViewModel(phrase: "I'm sending your pic now!\n You'll have it soon!")
+            let alertViewController = AlertViewController(viewModel: alertViewModel)
+            alertViewController.delegate = self
+            alertViewController.modalPresentationStyle = .formSheet
+            self.present(alertViewController, animated: true, completion: nil)
             
             textingView.phoneNumber = ""
             textingView.pinPadText.text = ""
