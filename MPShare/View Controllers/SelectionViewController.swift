@@ -64,6 +64,11 @@ class SelectionViewController: UIViewController, ButtonViewActionDelegate {
     func didTapButton(name: String) {
     
         print(name)
+        if name == "Tap to text" {
+            let viewModel = TextingViewModel(phoneNumber: "", imageNames: self.viewModel.photoSet.imagesNames)
+            let viewController = TextingViewController(viewModel: viewModel)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
         /*
         if name == "Tap to text" {
             let photoSet = viewModel.photoSet
