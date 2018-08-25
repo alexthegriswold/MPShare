@@ -15,6 +15,13 @@ First download this repository's zip file.
 
 To run the project, you'll need to install a few dependencies.
 
+Go to this project's directory and run. 
+
 ```
 pod install 
 ```
+This app is designed to only run on a 9.7 inch iPad Pro. 
+
+I've preloaded the app with one image. You'll be able to navigate around the app and text the image to your phone number. 
+
+Thanks for checking it out :)
