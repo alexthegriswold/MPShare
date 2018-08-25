@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AWSCognito (2.6.17):
+    - AWSCore (= 2.6.17)
+  - AWSCore (2.6.17)
+  - AWSS3 (2.6.17):
+    - AWSCore (= 2.6.17)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AWSCognito
+  - AWSS3
+  - IGListKit (~> 3.0)
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AWSCognito
+    - AWSCore
+    - AWSS3
+    - IGListKit
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AWSCognito: 2a3da30af7d731cfd1032812a052e65099bbe26a
+  AWSCore: 82fbb01d73a22cfae77ac2f03f6073a123092452
+  AWSS3: 00482eb3363cab1d4c3fd7b0bb7c117ae7264505
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+
+PODFILE CHECKSUM: 36f7e978919b5aca1cbc3158a160067f56f406d8
+
+COCOAPODS: 1.5.0
