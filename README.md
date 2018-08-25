@@ -10,4 +10,11 @@
 - AWSS3
 - AWSCognito 
 
+### Installation Instructions
+First download this repository's zip file.
 
+To run the project, you'll need to install a few dependencies.
+
+```
+pod install 
+```
