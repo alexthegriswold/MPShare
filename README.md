@@ -20,7 +20,7 @@ Go to this project's directory and run.
 ```
 pod install 
 ```
-This app is designed to only run on a 9.7 inch iPad Pro. 
+This app is designed specifically for a 9.7 inch iPad Pro. There is no auto layout used. 
 
 I've preloaded the app with one image. You'll be able to navigate around the app and text the image to your phone number. 
 
